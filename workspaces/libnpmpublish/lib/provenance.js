@@ -198,7 +198,6 @@ const generateProvenance = async (subject, opts) => {
       },
     }
   }
-  console.log(`$$$ ${JSON.stringify(payload)}`)
   return sigstore.attest(Buffer.from(JSON.stringify(payload)), INTOTO_PAYLOAD_TYPE, opts)
 }
 

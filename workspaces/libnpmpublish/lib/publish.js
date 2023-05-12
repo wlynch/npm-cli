@@ -190,6 +190,7 @@ const buildMetadata = async (registry, manifest, tarballData, spec, opts) => {
       log.notice('publish', `Provenance statement published to transparency log: ${logUrl}`)
     }
 
+    console.log(`$$$ ${JSON.stringify(provenanceBundle)}`)
     const serializedBundle = JSON.stringify(provenanceBundle)
     root._attachments[provenanceBundleName] = {
       content_type: provenanceBundle.mediaType,
